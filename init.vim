@@ -4,11 +4,14 @@ set number relativenumber
 " adjusts to one of the pre-existing colourscheme's
 colorscheme elflord
 
-" wraps lines so they no longer go off the page.
-set wrap
-
-" breaks the line so that words are split when line wrapping
-set linebreak
+" only configures these settings upon opening a text(.text) file
+"  setlocal 
+"   sets the variable for the current window only
+"  wrap
+"   wraps a line around the screen so it doesn't go offscreen
+"  linebreak
+"   ensures that when wrapping entire words are wrapped not parts
+autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak
 
 " stops the damn thing from beeping quite so much
 set visualbell
