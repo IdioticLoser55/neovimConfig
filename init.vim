@@ -4,6 +4,9 @@ set number relativenumber
 " adjusts to one of the pre-existing colourscheme's
 colorscheme elflord
 
+" defaults to not wrapping text around the world
+set nowrap
+
 " only configures these settings upon opening a text(.text) file
 "  setlocal 
 "   sets the variable for the current window only
