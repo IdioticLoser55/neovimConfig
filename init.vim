@@ -1,4 +1,3 @@
-" useless comment so I can make a commit and login
 " shows the current line number and then the lines relative to the current line
 set number relativenumber
 
