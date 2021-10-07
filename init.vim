@@ -86,7 +86,6 @@ inoremap    <=      <=
 "  ========================= ( Autocompletion End ==========================
 "  ========================= " Autocompletion Start =========================
 inoremap    "       ""<Left>
-inoremap    "<CR>   <CR>"<CR>"<Esc>O
 inoremap    ""      "
 
 inoremap <expr> "   strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"<Left>"
