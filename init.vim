@@ -54,4 +54,4 @@ lua require('plugins')
 " calls my pair auto-completion config file.
 source ~/.config/nvim/pairAutoComplete.vim
 
-source ~/.config/nvim/luginConfig/treesitter.vim
+source ~/.config/nvim/pluginConfig/treesitter.vim
