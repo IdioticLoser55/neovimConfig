@@ -37,7 +37,7 @@ inoremap    <=      <=
 "  ========================= " Autocompletion Start =========================
 inoremap    ""      "
 
-inoremap <expr> "       strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"<Left>"
+inoremap <expr> "       strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : (strpart(getline('.'), col('.')-2, 1) == "\"" ? "\"" : "\"\"<Left>")
 "  ========================= " Autocompletion End ==========================
 "  ========================= , Autocompletion Start =========================
 inoremap    ,           ,<Space>
