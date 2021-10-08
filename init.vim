@@ -34,10 +34,10 @@ set incsearch
 set expandtab
 
 " defines the size of tabs in spaces.
-set tabstop=4
+set tabstop=2
 
 " defines the size of indents in spaces
-set shiftwidth=4
+set shiftwidth=2
 
 " sets it up so that it will hopefully autoindent semi-correctly
 set autoindent smartindent cindent
@@ -52,30 +52,6 @@ set autoindent smartindent cindent
 lua require('plugins')
 
 " calls my pair auto-completion config file.
-source ~/.config/nvim/pairAutoComplete.vim
+source pairAutoComplete.vim
 
-
-
-
-
-
-
-
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ignore_install = { "javascript" }, -- List of parsers to ignore installing
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = {""},  -- list of language that will be disabled
-
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-}
-EOF
-
-
+source pluginConfig/treesitter.vim
