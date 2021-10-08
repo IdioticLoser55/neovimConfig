@@ -6,12 +6,18 @@ return require('packer').startup(function()
     --adds plugin treesitter playground
     use 
     {
-        'nvim-treesitter/playground', 
+        'nvim-treesitter/playground'
     }
+
     --adds plugin treesitter
     use 
     {
         'nvim-treesitter/nvim-treesitter', 
         run = ':TSUpdate'
+    }
+
+    use 
+    {
+        'neoclide/coc.nvim', branch = 'release'       
     }
 end)

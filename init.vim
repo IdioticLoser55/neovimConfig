@@ -2,7 +2,7 @@
 set number relativenumber
 
 " adjusts to one of the pre-existing colourscheme's
-colorscheme elflord
+colorscheme evening
 
 " defaults to not wrapping text around the world
 set nowrap
@@ -34,10 +34,10 @@ set incsearch
 set expandtab
 
 " defines the size of tabs in spaces.
-set tabstop=2
+set tabstop=4
 
 " defines the size of indents in spaces
-set shiftwidth=2
+set shiftwidth=4
 
 " sets it up so that it will hopefully autoindent semi-correctly
 set autoindent smartindent cindent
@@ -54,4 +54,8 @@ lua require('plugins')
 " calls my pair auto-completion config file.
 source ~/.config/nvim/pairAutoComplete.vim
 
+" calls the config for treesitter
 source ~/.config/nvim/pluginConfig/treesitter.vim
+
+" calls the config for coc
+source ~/.config/nvim/pluginConfig/coc.vim
