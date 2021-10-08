@@ -106,4 +106,6 @@ inoremap    ,<Space>    ,<Space>
 
 " ========================== Autocomplete Pairs End ==========================
 
-
+" Adds packer. A plugin manager. Not really much more sure than that.
+" This calls the packer config file which has the plugins to be added.
+lua require('plugins')
