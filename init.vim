@@ -52,6 +52,6 @@ set autoindent smartindent cindent
 lua require('plugins')
 
 " calls my pair auto-completion config file.
-source pairAutoComplete.vim
+source ~/.config/nvim/pairAutoComplete.vim
 
-source pluginConfig/treesitter.vim
+source ~/.config/nvim/luginConfig/treesitter.vim
