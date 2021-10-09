@@ -1,6 +1,8 @@
 " shows the current line number and then the lines relative to the current line
 set number relativenumber
 
+" tells nvim it has a dakr background
+set background=dark
 " adjusts to one of the pre-existing colourscheme's
 colorscheme evening
 
@@ -18,7 +20,6 @@ autocmd BufRead,BufNewFile *.txt setlocal wrap linebreak
 
 " stops the damn thing from beeping quite so much
 set visualbell
-
 
 " ======================== Search Config Start ===============================
 " only case sensitive when a capital letter is used in the search term
