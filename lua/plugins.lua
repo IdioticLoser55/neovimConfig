@@ -20,4 +20,9 @@ return require('packer').startup(function()
     {
         'neoclide/coc.nvim', branch = 'release'       
     }
+
+    use
+    {
+        'preservim/nerdtree'
+    }
 end)
