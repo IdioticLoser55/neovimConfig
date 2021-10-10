@@ -12,7 +12,6 @@ source ~/.config/nvim/pluginConfig/treesitter.vim
 " calls the config for coc
 source ~/.config/nvim/pluginConfig/coc.vim
 
-
 " calls the general config settings.
 source ~/.config/nvim/general/general.vim
 
