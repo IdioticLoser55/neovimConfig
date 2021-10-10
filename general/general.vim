@@ -1,3 +1,6 @@
+" Sets the mapleader to s. Apparently this is important
+let mapleader = "s"
+
 " stops the damn thing from beeping quite so much
 set visualbell
 
