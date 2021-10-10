@@ -4,6 +4,4 @@ setlocal wrap
 " makes it so that when wrapping lines words aren't broken in half.
 setlocal linebreak
 
-
 set nonumber norelativenumber
-colorscheme pablo
