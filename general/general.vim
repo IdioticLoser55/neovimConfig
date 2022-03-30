@@ -30,6 +30,7 @@ set relativenumber
 
 " ======================== Search Config Start ===============================
 " only case sensitive when a capital letter is used in the search term
+set ignorecase
 set smartcase
 
 " searches while your typing instead of waiting for enter
