@@ -1,3 +1,9 @@
+-- ============================ MISC Start ====================================
+vim.cmd("set nowrap")
+vim.cmd("set visualbell")
+vim.g.mapleader = " "
+-- ============================= MISC End =====================================
+
 -- ======================== Search Config Start ===============================
 -- only case sensitive when a capital letter is used in the search term
 vim.cmd("set ignorecase")
@@ -33,8 +39,7 @@ vim.cmd("set autoindent")
 vim.cmd("set smartindent")
 -- ========================== Auto-Indent Config End ==========================
 
-
--- ======================== Lazy Nvim Installation Start ======================
+-- ============================== Lazy Nvim Start =============================
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -47,11 +52,45 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
--- ========================= Lazy Nvim Installation End =======================
 
--- ============================== Plugins Start ===============================
-local plugins = {}
+-- List Plugins to install.
+local plugins = {
+    { "EdenEast/nightfox.nvim", priority = 1000 }, -- Colourscheme
+    {
+        "nvim-telescope/telescope.nvim", tag = '0.1.5',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
+    { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+}
 local opts = {}
 
 require("lazy").setup(plugins, opts)
--- =============================== Plugins End ================================
+-- =============================== Lazy Nvim End ==============================
+
+-- ============================ Colourscheme Start ============================
+-- https://github.com/EdenEast/nightfox.nvim
+require("nightfox").setup({})
+vim.cmd("colorscheme carbonfox")
+-- ============================= Colourscheme End =============================
+
+-- ============================= Telescope Start ==============================
+local builtin = require("telescope.builtin")
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- ============================== Telescope End ===============================
+
+-- ============================= Treesitter Start =============================
+local config = require("nvim-treesitter.configs")
+config.setup({
+-- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
+    ensure_installed = {
+        "lua", "c", "rust", "cpp", "c_sharp", "bash", "python", "java", "markdown",
+        "javascript", "sql", "ssh_config", "xml", "yaml", "csv", "toml"
+    },
+    sync_install = false,
+    highlight = { enable = true },
+    indent = { enable = true},
+})
+-- ============================== Treesitter End ==============================
