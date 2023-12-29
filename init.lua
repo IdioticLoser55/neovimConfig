@@ -32,3 +32,26 @@ vim.cmd("set autoindent")
 -- automagically increases indentation when it thinks.
 vim.cmd("set smartindent")
 -- ========================== Auto-Indent Config End ==========================
+
+
+-- ======================== Lazy Nvim Installation Start ======================
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable",
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
+-- ========================= Lazy Nvim Installation End =======================
+
+-- ============================== Plugins Start ===============================
+local plugins = {}
+local opts = {}
+
+require("lazy").setup(plugins, opts)
+-- =============================== Plugins End ================================
