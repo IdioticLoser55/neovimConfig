@@ -16,10 +16,30 @@
 
 - Tag List. Opens up a side window with all the variables and methods.
 
-- figure out ligatures.
+- Fonts
+    - figure out ligatures.
+    - devicons
+    - nerdfont's
 
 - Pick a propper mapleader.
 - Really look into telescope, treesitter.
+- Look into mini.nvim. Might replace telescope and some other plugins.
+    - Figure out what "text-objects" are.
+
+- Once you've got a basic setup you really need to go through and figure out all the plugins you actually want to use.
+    - FileExplorer
+        - Ranger / rnvimr
+        - Nerdtree
+        - Fern.vim
+        - Vim-dirvish
+        - nvim-tree.lua
+        - tree.nvim
+        - chadTree
+        - telescope-file-browser.nvim
+        - neo-tree.nvim
+        - mini.files
+    - Fuzzy Finder
+        - Telescope
 
 # Terminal Ideas
 - Tabby
