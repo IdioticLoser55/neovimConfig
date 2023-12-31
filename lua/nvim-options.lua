@@ -2,6 +2,7 @@
 vim.cmd("set nowrap")
 vim.cmd("set visualbell")
 vim.g.mapleader = " "
+vim.cmd("set linebreak")
 -- ============================= MISC End =====================================
 
 -- ======================== Search Config Start ===============================

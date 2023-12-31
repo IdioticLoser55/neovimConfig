@@ -26,6 +26,8 @@
 - Look into mini.nvim. Might replace telescope and some other plugins.
     - Figure out what "text-objects" are.
 
+- Figure out keybindings.
+
 - Once you've got a basic setup you really need to go through and figure out all the plugins you actually want to use.
     - FileExplorer
         - Ranger / rnvimr

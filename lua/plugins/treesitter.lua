@@ -1,6 +1,6 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter#supported-languages
 -- Tokeniser, allows syntax highlighting and stuff.
-return { 
+return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
