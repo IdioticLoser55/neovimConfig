@@ -1,6 +1,7 @@
 return {
 	{
 		"williamboman/mason.nvim",
+        lazy = false,
 		config = function()
 			require("mason").setup({})
 		end,
@@ -8,6 +9,7 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+        lazy = false,
 		opts = {
 			ensure_installed = {
 				"bashls",
@@ -32,6 +34,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+        lazy = false,
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -59,8 +62,8 @@ return {
 					vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
 					local opts = { buffer = ev.buf }
-					vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+					vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opts)
+					vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts)
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 					vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 				end,

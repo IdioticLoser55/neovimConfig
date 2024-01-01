@@ -8,6 +8,6 @@ return {
         "3rd/image.nvim",
     },
     config = function()
-        vim.keymap.set('n', '<leader>fe', ':Neotree<CR>')
-    end
+        vim.keymap.set("n", "<leader>fe", ":Neotree<CR>")
+    end,
 }
