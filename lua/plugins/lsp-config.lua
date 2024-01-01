@@ -7,50 +7,50 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		dependencies = {
-			"williamboman/mason.nvim",
-			"neovim/nvim-lspconfig",
+		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+		opts = {
+			ensure_installed = {
+				"bashls",
+				"clangd",
+				"csharp_ls",
+				"omnisharp",
+				"biome",
+				"jdtls",
+				"lua_ls",
+				"marksman",
+				"pylsp",
+				"rust_analyzer",
+				"sqls",
+				"taplo",
+				"lemminx",
+				"yamlls",
+			},
 		},
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"bashls",
-					"clangd",
-					"csharp_ls",
-					"omnisharp",
-					"biome",
-					"jdtls",
-					"lua_ls",
-					"marksman",
-					"pylsp",
-					"rust_analyzer",
-					"sqls",
-					"taplo",
-					"lemminx",
-					"yamlls",
-				},
-			})
+		config = function(_, opts)
+			require("mason-lspconfig").setup(opts)
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 			local lspconfig = require("lspconfig")
 
-			lspconfig.bashls.setup({})
-			lspconfig.clangd.setup({})
-			lspconfig.csharp_ls.setup({})
-			lspconfig.omnisharp.setup({})
-			lspconfig.biome.setup({})
-			lspconfig.jdtls.setup({})
-			lspconfig.lua_ls.setup({})
-			lspconfig.marksman.setup({})
-			lspconfig.pylsp.setup({})
-			lspconfig.rust_analyzer.setup({})
-			lspconfig.sqls.setup({})
-			lspconfig.taplo.setup({})
-			lspconfig.lemminx.setup({})
-			lspconfig.yamlls.setup({})
+			lspconfig.bashls.setup({ capabilities = capabilities })
+			lspconfig.clangd.setup({ capabilities = capabilities })
+			lspconfig.csharp_ls.setup({ capabilities = capabilities })
+			lspconfig.omnisharp.setup({ capabilities = capabilities })
+			lspconfig.biome.setup({ capabilities = capabilities })
+			lspconfig.jdtls.setup({ capabilities = capabilities })
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.marksman.setup({ capabilities = capabilities })
+			lspconfig.pylsp.setup({ capabilities = capabilities })
+			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+			lspconfig.sqls.setup({ capabilities = capabilities })
+			lspconfig.taplo.setup({ capabilities = capabilities })
+			lspconfig.lemminx.setup({ capabilities = capabilities })
+			lspconfig.yamlls.setup({ capabilities = capabilities })
 
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
