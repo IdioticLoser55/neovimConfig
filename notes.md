@@ -1,4 +1,9 @@
 # Things to do
+- Figure out how lazy loading works.
+    - and with what plugins.
+
+## Comments
+- Need to go through once happy and make a note of what everything does before you forget.
 
 ## Fonts
 - figure out ligatures.
@@ -9,6 +14,25 @@
 - Pick a propper mapleader.
 - Figure out keybindings.
 
+## LSP
+- https://github.com/neovim/nvim-lspconfig/wiki/Language-specific-plugins
+    - There are some language specific plugins that you may want to use.
+    - They are better at dealing with extended functionality.
+
+- Do something for spelling.
+
+- https://github.com/hinell/lsp-timeout.nvim
+    - Shut's down an lsp when the attached buffer is not in focus.
+    - Might be useful.
+    - And this.
+    - https://github.com/neovim/nvim-lspconfig/wiki/Toggle-LSP-for-current-buffer
+
+## Autocompletion
+- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
+    - Not sure, but think the tab thing might let me tab through the expanded snip.
+
+- https://github.com/windwp/nvim-autopairs
+    - Auto pairs.
 
 ## Formatters and Linters
 - Figuer out what formatters and linters you want.
@@ -16,6 +40,9 @@
 - https://github.com/jay-babu/mason-null-ls.nvim
     - Use this to add ensure_install functionality for formatters.
     - And Linters.
+
+- Maybe have a look at this.
+- https://github.com/neovim/nvim-lspconfig/wiki/Linting
 
 ## Rust
 - https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/
